@@ -36,6 +36,7 @@ export default function ContactPage() {
       }
     } catch (err) {
       setSuccess("Something went wrong. Please try later.");
+      console.error(err);
     }
 
     setLoading(false);

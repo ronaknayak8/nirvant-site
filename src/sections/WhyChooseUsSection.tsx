@@ -1,22 +1,31 @@
+"use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { whyChooseUs } from "@/data/content";
 
 export default function WhyChooseUsSection() {
-  const containerVariants = {
+  // Container variant
+  const containerVariants: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.2 } },
   };
 
-  const cardVariants = {
+  // Card variant - type-safe
+  const cardVariants: Variants = {
     hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { type: "tween", duration: 0.6 } },
+    visible: { 
+      opacity: 1, 
+      x: 0, 
+      transition: { type: "tween" as const, duration: 0.6 } 
+    },
   };
 
   return (
     <section className="relative py-28 px-6 bg-gradient-to-br from-teal-100 via-teal-200 to-indigo-200 overflow-hidden">
+      {/* Background radial gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.5),transparent_70%)]"></div>
 
+      {/* Section title */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -26,6 +35,7 @@ export default function WhyChooseUsSection() {
         {whyChooseUs.title}
       </motion.h2>
 
+      {/* Cards */}
       <motion.div
         variants={containerVariants}
         initial="hidden"

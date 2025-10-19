@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+
 import FullTeamSection from "@/sections/FullTeamSection";
 
 export default function AboutPage() {

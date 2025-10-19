@@ -1,11 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { whatWeOffer } from "@/data/content";
 
 export default function WhatWeOfferSection() {
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 40, scale: 0.95 },
-    visible: (i: number) => ({
+    visible: (i = 0) => ({
       opacity: 1,
       y: 0,
       scale: 1,
@@ -30,7 +30,7 @@ export default function WhatWeOfferSection() {
         {whatWeOffer.items?.map((item, i) => (
           <motion.div
             key={item.title}
-            custom={i}
+            custom={i}           // Pass index to variant function
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
