@@ -32,37 +32,84 @@ export const pillars = [
   },
 ];
 
-export const offers = [
-  {
-    title: "Personal Mentorship",
-    description:
-      "One-on-one sessions tailored to your academic, emotional, or career journey. Our mentors guide you with clarity and care.",
-  },
-  {
-    title: "Wellness Programs",
-    description:
-      "Structured content and sessions designed to improve focus, reduce stress, and build long-term emotional strength.",
-  },
-  {
-    title: "Tech for Growth",
-    description:
-      "AI-powered tools and digital resources that make personal growth more measurable, engaging, and effective.",
-  },
-];
-
-export const whyChooseUs = {
-  title: "Why Choose Nirvant?",
-  points: [
-    "Integrated approach—mental wellness meets professional growth.",
-    "Personalized mentorship rooted in real human understanding.",
-    "Community-driven platform that evolves with your needs.",
-    "Built for students, professionals, and visionaries alike.",
+export const whatWeOffer = {
+  title: "What We Offer",
+  items: [
+    {
+      title: "Personalized Mentorship",
+      description: "Tailored guidance for your unique journey.",
+      icon: "👥",
+    },
+    {
+      title: "Courses & Workshops",
+      description: "Practical skills and knowledge for growth.",
+      icon: "📚",
+    },
+    {
+      title: "Tech Tools & AI Integrations",
+      description: "Cutting-edge solutions to enhance productivity.",
+      icon: "💻",
+    },
   ],
 };
 
-export const teamIntro = {
-  title: "Meet Our Team",
-  description:
-    "A collective of educators, designers, and technologists who share one vision—help people grow from within.",
+export const whyChooseUs = {
+  title: "Why Choose Nirvant?",
+  items: [
+    {
+      title: "Expert Team",
+      description: "Highly qualified mentors, wellness coaches, and tech specialists.",
+      icon: "🧠",
+    },
+    {
+      title: "Holistic Approach",
+      description: "We combine wellness, education, and career growth seamlessly.",
+      icon: "🌐",
+    },
+    {
+      title: "Innovative Tools",
+      description: "Tech-driven solutions to track your progress and enhance learning.",
+      icon: "⚡",
+    },
+  ],
+};
+// src/data/content.ts
+
+export const teamCategories = [
+  { title: "Founders & Co-Founders", key: "founders" },
+  { title: "Medico Team", key: "medicoTeam" },
+  { title: "Tech Team", key: "techTeam" },
+  { title: "Digital Design Team", key: "designTeam" },
+];
+
+// src/data/content.ts
+export const aboutPage = {
+  hero: {
+    title: "About Nirvant",
+    subtitle: "A dynamic hub for visionary leaders, ambitious students, and forward-thinking investors",
+  },
+  story: `
+Nirvant is a dynamic hub where visionary leaders, ambitious students, and forward-thinking investors come together to drive meaningful change. 
+We combine cutting-edge mental health solutions, advanced technology, and educational excellence to deliver transformative content and personalized mentorship tailored to your unique journey. 
+Our mission is to empower individuals and organizations to unlock their full potential by providing actionable insights, innovative strategies, and unwavering support. 
+Through our diverse channels—Nirvant Wellness, Nirvant Tech, and Nirvant Edge—we offer a wide range of resources that nurture emotional clarity, mental resilience, and professional growth. 
+Our personalized mentorship ensures that every learner receives guidance aligned with their goals, fostering confidence and sustained success in an ever-evolving world. 
+At Nirvant, we believe that true growth happens at the convergence of knowledge, support, and innovation. 
+Whether you are a student seeking clarity, a professional aiming to elevate your career, or an investor looking to partner with a purpose-driven enterprise, Nirvant is your trusted ally on the path to a healthier, more impactful future. 
+Join us and be part of a community committed to shaping success with intention and heart.
+  `,
+  philosophy: `
+At Nirvant, growth happens at the intersection of knowledge, support, and innovation. 
+We focus on clarity, emotional resilience, and reflection, empowering students, professionals, and investors to reach their highest potential. 
+Every initiative is designed to combine transformative content with personalized guidance, ensuring actionable insights and sustainable progress.
+  `,
 };
 
+import { founders, medicoTeam, techTeam, designTeam } from "./team";
+
+export const teamPage = {
+  founders,
+  medicoTeam,
+  techTeam,
+  designTeam,
+};
